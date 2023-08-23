@@ -7,7 +7,7 @@ import ru.testit.models.LinkType;
 import ru.testit.services.Adapter;
 
 
-public class main_test {
+public class MainTest {
 
     @Test
     @ExternalId("Testng externalid1")
