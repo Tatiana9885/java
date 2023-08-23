@@ -34,10 +34,6 @@ test {
     doFirst {
         def weaver = configurations.aspectConfig.find { it.name.contains("aspectjweaver") }
         jvmArgs += "-javaagent:$weaver"
-    }
-    // to enable command line options, specify the option that will be passed like this:
-    // systemProperty '<parameter_name>', System.getProperty('<parameter_name>')
-    // for example:
-    // systemProperty 'tmsTestRunName', System.getProperty('tmsTestRunName')
+    systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
 }
 
