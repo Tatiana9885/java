@@ -33,7 +33,8 @@ test {
     useTestNG()
     doFirst {
         def weaver = configurations.aspectConfig.find { it.name.contains("aspectjweaver") }
-        jvmArgs += "-javaagent:$weaver"
-        systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
+        jvmArgs += "-javaagent:$weaver"}
+    
+    systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
 }
 
