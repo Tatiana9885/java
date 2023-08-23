@@ -34,6 +34,6 @@ test {
     doFirst {
         def weaver = configurations.aspectConfig.find { it.name.contains("aspectjweaver") }
         jvmArgs += "-javaagent:$weaver"
-    systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
+        systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
 }
 
