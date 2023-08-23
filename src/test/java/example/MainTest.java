@@ -7,17 +7,17 @@ import ru.testit.models.LinkType;
 import ru.testit.services.Adapter;
 
 
-public class MainTest {
+public class main_test {
 
     @Test
-    @ExternalId("Testng externalid")
-    @DisplayName("Testng displayname")
-    @Title("Testng title")
-    @Links(links={@Link(url = "https://test01.example", type = LinkType.REQUIREMENT),})
+    @ExternalId("Testng externalid1")
+    @DisplayName("Testng displayname1")
+    @Title("Testng title1")
+    @Links(links = {@Link(url = "https://test01.example", type = LinkType.REQUIREMENT),})
+    @WorkItemIds("132136")
     public void test_1() {
         Assert.assertTrue(true);
         stepWithParams("password", 456);
-        stepWithoutParams();
     }
 
     @Step
@@ -29,6 +29,16 @@ public class MainTest {
         Adapter.addMessage("Message");
     }
 
+    @Test
+    @ExternalId("Testng externalid2")
+    @DisplayName("Testng displayname2")
+    @Title("Testng title2")
+    @WorkItemIds("132137")
+    public void test_2() {
+        Assert.assertTrue(true);
+        stepWithoutParams();
+    }
+
     @Step
     @Title("Step 2 empty")
     @Description("Step 2 description")
@@ -37,4 +47,6 @@ public class MainTest {
         Adapter.addAttachments("./attachments/text.txt");
         Adapter.addLinks("https://google.com", "google", "search page", LinkType.RELATED);
     }
+
 }
+
