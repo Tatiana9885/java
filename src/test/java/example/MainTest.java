@@ -13,7 +13,6 @@ public class MainTest {
     @ExternalId("Testng externalid1")
     @DisplayName("Testng displayname1")
     @Title("Testng title1")
-    @Links(links = {@Link(url = "https://test01.example", type = LinkType.REQUIREMENT),})
     @WorkItemIds("132136")
     public void test_1() {
         Assert.assertTrue(true);
