@@ -36,5 +36,8 @@ test {
         jvmArgs += "-javaagent:$weaver"}
     
     systemProperty 'tmsTestRunId', System.getProperty('tmsTestRunId')
+    systemProperty 'tmsUrl', System.getProperty('tmsUrl')
+    systemProperty 'tmsPrivateToken', System.getProperty('tmsPrivateToken')
+    systemProperty 'tmsProjectId', System.getProperty('tmsProjectId')
 }
 
